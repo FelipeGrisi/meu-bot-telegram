@@ -1,1 +1,1 @@
-web: python bem vindo.py
+web: python bem_vindo.py
