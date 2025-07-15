@@ -1,3 +1,4 @@
+import os
 from telegram.ext import Application, MessageHandler, filters
 import logging
 
@@ -7,7 +8,7 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 logger = logging.getLogger(__name__)
 
 # Substitua 'SEU_TOKEN_AQUI' pelo token do seu bot
-TOKEN = '7954341572:AAErI33mSbFpVxJwZzVtAnRZzYpBCM130h8' # Lembre-se de colocar seu token aqui!
+TOKEN = os.getenv("TELEGRAM_BOT_TOKEN") # Lembre-se de colocar seu token aqui!
 
 async def welcome_new_members(update, context):
     """
